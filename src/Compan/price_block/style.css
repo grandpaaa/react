@@ -1,0 +1,141 @@
+.price{
+    margin-top: 100px;
+    padding: 0 100px;
+}
+
+.price_top{
+    margin-bottom: 50px;
+}
+
+.price_top h1{
+    font-size: 2em;
+    font-family: "Roboto Slab",sans-serif;
+    color: #5e5e5e;
+}
+
+.line{
+    margin-top: 10px;
+	position: relative;
+	width: 100%;
+	height: 3px;
+	background: rgb(209, 206, 206);
+}
+
+.line:before{
+	content: '';
+	width: 2.5%;
+	height: 5px;
+	background-color: #f3701d;
+	position: absolute;
+}
+
+.price_block{
+    display: flex;
+    padding-bottom: 100px;
+    justify-content: space-between;
+}
+
+.gallery-grid{
+    width: 22%;
+    background-repeat: #fff;
+}
+
+.grid-item_inner{
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    transition: 1s;
+
+}
+
+
+.grid-item h2{
+    padding-top: 30px;
+}
+
+.grid-item h2 a{
+    transition: .4s;
+    color: #000;
+    font-family: "Roboto Slab",sans-serif;
+}
+
+.grid-item h2 a:hover{
+    color: #f3701d;
+}
+
+.grid-item p{
+    padding-top:  30px;
+    line-height: 20px;
+    font-family: "Roboto",sans-serif;
+    color: rgb(151, 150, 150);
+}
+
+.grid-item h1{
+    padding-top: 20px;
+    color: #f3701d;
+    font-family: "Roboto Slab",sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.grid-item_inner:before{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    z-index: 2;
+    transition: all 0.4s ease;
+    content: '';
+}
+
+.grid-item:hover .grid-item_inner:before{  
+    opacity: 1;
+}
+
+.grid-item_title{
+    position: absolute;
+    left: 30%;
+    top: 30%;
+    opacity: 0;
+    font-family: Arial;
+    font-size: 24px;
+    z-index: 20;
+    transition: 1.5s;
+    animation-name: sl;
+    animation-duration: .1s;
+}
+
+@keyframes sl{
+	to{
+        opacity: 1;
+        /* bottom: 4%; */
+	}
+}
+
+.grid-item:hover .grid-item_title{
+    opacity: 1;
+    top: 50%;
+}
+
+.grid-item_title a{
+    margin: 5px;
+    padding: 10px;
+    background: #f3701d;
+    border-radius: 50%;
+    color: #fff;
+}
+
+.grid-item_img{
+    width: 100%;
+    object-fit: cover;
+    transition: all .4s ease;
+}
+
+
+.grid-item_inner:hover .grid-item_img{
+    transform: scale(1.1);
+}
